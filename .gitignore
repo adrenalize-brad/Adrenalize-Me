@@ -1,0 +1,13 @@
+# Build output
+.cache
+public
+
+# Environment variables
+.env
+
+# Dependency directories
+node_modules
+package-lock.json
+
+# Logs
+npm-debug.log*

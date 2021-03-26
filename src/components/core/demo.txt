@@ -1,0 +1,20 @@
+Component Demo with ALL props -->
+
+Card:
+
+<Card
+    cardClass="m-5 pb-2 rounded-md shadow-lg flex flex-col justify-center items-center"
+    imageSrc="https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/article_images/2019/01/26/file73pb1myo4921c9p51htg-1548487801.jpg?itok=cJluav6Mto-1464822759023-fed622ff2c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80h.com/photos/Bkci_8qcdvQ"
+    imageAlt="Mountains"
+    imageWrapperClass="h-3/5 rounded-t-md"
+    imageClass="h-full w-full object-cover rounded-t-md"
+    title="Mountains"
+    titleClass="text-center font-headers font-bold text-3xl p-2"
+    caption="These absolutely breathtaking mountains can be all yours if you want them, all you have to do is fork over a hefty five bucks! Do it, you know you want to."
+    captionClass="px-4 font-content"
+    price="$5.00"
+    priceClass="font-semibold text-2xl font-headers m-2"
+    buttonClass="cursor-pointer hover:bg-primary px-4 py-2 m-1 font-content font-semiBold text-xl rounded-lg shadow-md"
+    buttonTitle="Buy Now"
+    url="#"
+/>
