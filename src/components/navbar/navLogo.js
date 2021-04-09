@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
- 
+  
 const NavLogo = ( { linkUrl, image, imageAlt, title, caption }) => {
 
     return(

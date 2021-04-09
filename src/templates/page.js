@@ -5,7 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 function PageTemplate({ pageContext: { page } }) {
   
   return (
-
+ 
     <PageWrapper>
 
       <div className="page-header">

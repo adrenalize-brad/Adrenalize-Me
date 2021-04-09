@@ -27,5 +27,5 @@ const algoliaTransformer = ({
             };
         }
     );
-  
+   
     module.exports = algoliaTransformer;

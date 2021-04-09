@@ -8,7 +8,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { FacebookIcon, FbMessengerIcon, LinkedInIcon, TwitterIcon, PinterestIcon, RedditIcon, WhatsappIcon, EmailIcon } from '../components/icons/icons'
 import SEO from '../components/seo/SEO'
-
+ 
 function PostTemplate({
   data: { authorImage, coverImage, categoryPosts }, 
   pageContext: { page }

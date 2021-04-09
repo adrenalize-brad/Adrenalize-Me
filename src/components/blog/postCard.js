@@ -4,7 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import Tag from './tag'
 import Button from '../button/button'
 import './blog.scss'
- 
+  
 const PostCard = ({ title, date, image, excerpt, category, tags, slug, categoryUrl }) => {
 
     return(

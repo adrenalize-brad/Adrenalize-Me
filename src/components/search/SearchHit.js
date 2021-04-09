@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchCard from './searchCard'
-  
+   
 const SearchHit = ({ hit: { objectID, title, date, excerpt, slug, category, tags, coverImage } }) => (
 
   <article key={objectID}>

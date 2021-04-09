@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { bool, func } from 'prop-types'
- 
+  
 const MobileSocialItem = ({open, setOpen, className, url, iconClass, alt}) => {
 
     return(

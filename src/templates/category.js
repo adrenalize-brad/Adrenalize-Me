@@ -7,7 +7,7 @@ import SEO from '../components/seo/SEO'
 function PageTemplate({ data: { allGraphCmsPost }, pageContext: { title, coverImage } }) {
 
   const sharingUrl = typeof window !== 'undefined' ? window.location.href : '';
-
+ 
   return (
  
     <PageWrapper>

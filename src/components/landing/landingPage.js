@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
 import BackgroundImage from 'gatsby-background-image'
 import './landing.scss'
- 
+  
 const LandingPage = ({ children, title, backgroundImage }) => {
 
     const data = useStaticQuery(graphql`
