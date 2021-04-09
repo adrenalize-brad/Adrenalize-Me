@@ -25,11 +25,6 @@ const ContactForm = () => {
 
     }
 
-    const clearForm = () => {
-        setName("");
-        setSubject("");
-    }
-
     return(
 
 <div>
