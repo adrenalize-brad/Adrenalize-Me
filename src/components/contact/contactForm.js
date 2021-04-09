@@ -22,7 +22,6 @@ const ContactForm = () => {
     const handleSubmit = (event) => {
 
         event.preventDefault();
-        clearForm();
 
     }
 
@@ -46,7 +45,7 @@ const ContactForm = () => {
 
         <div className="text-input">
             <label htmlFor="name">Name:</label>
-            <input type="text" name="name" value={name} onChange={handleChange} />
+            <input type="text" name="name" placeholder="Cash Smith" value={name} onChange={handleChange} />
         </div>
 
         <div className="text-input">

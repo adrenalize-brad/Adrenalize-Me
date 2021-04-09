@@ -11,3 +11,6 @@ package-lock.json
 
 # Logs
 npm-debug.log*
+
+#GraphCMS Fragments
+graphcms-fragments
