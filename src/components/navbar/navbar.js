@@ -18,7 +18,7 @@ const Navbar = () => {
 
     const node = useRef(); 
     useOnClickOutside(node, () => setOpen(false));
-  
+    
     if (typeof window !== "undefined") {
         require("smooth-scroll")('a[href*="#"]')
     }
