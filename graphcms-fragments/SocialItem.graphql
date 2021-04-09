@@ -1,0 +1,10 @@
+fragment SocialItem on SocialItem {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  title
+  url
+  iconClass
+}

@@ -1,0 +1,331 @@
+@import '../../styles/defaults.scss';
+
+.search-overlay{
+    background-color:$white;
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform: translateX(-50%);
+    width:calc(100vw - 40px);
+    height:calc(100vh - 130px);
+    border-radius:2px;
+    box-shadow: 0px 0px 5px 2px rgba(100, 100, 100, 0.2);
+
+    .header{
+        position:relative;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        margin:20px 0 0 20px;
+        width:100%;
+
+        h1{
+            color:$primary;
+            text-shadow: 0px 0px 2px rgba(60,60,60,0.3);
+            font-size:3rem;
+        }
+
+        .ais-SearchBox{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:80%;     
+
+            input{
+                width:100%;
+                height:40px;
+                font-size:30px;
+                padding:10px 5px;
+                background-color:transparent;
+                border-bottom:solid 1px $black;
+            }
+
+            input:focus{
+                outline:none;
+            }
+
+            button{
+                display:none;
+            }
+        }
+
+        .search-toggle{
+            position:fixed;
+            right:20px;
+            top:20px;
+            height:50px;
+            width:50px;
+
+            .close-icon{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                color:$black;
+                font-size:30px;
+            }
+
+            .close-icon:hover{
+                color:$primary;
+                cursor:pointer;
+            }
+        }
+    }
+
+    .search-filter{
+        position:absolute;
+        left:20px;
+        top:100px;
+        width:200px;
+
+        h3{
+            padding:10px 0;
+        }
+
+        .ais-RefinementList{
+            margin:10px 0;
+
+            label{
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                margin:5px 0;
+            }
+
+            label:hover{
+                cursor:pointer;
+            }
+
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                border-radius: 50%;
+                vertical-align: middle;
+                border: 1px solid #ddd;
+                -webkit-appearance: none;
+                outline: none;
+                cursor: pointer;
+                margin-right:5px;
+              }
+
+              input[type="checkbox"]:checked {
+                background-color: $primary;
+                border:3px solid $white;
+                box-shadow: 0px 0px 5px 2px rgba(60,60,60,0.3);
+              }
+
+              .ais-RefinementList-labelText{
+                font-family:$headers;
+                font-weight:600;
+                font-size:15px;
+              }
+
+              .ais-RefinementList-count{
+                  font-family:$headers;
+                  padding:1px 6px;
+                  border-radius:5px;
+                  font-size:15px;
+                  font-weight:600;
+                  color:$primary;
+                  background-color:rgba(100, 100, 100, 0.2);
+                  margin-left:10px;
+              }
+        }
+
+        .ais-RefinementList-showMore{
+            position:relative;
+            left:50%;
+            transform: translateX(-75%);
+            margin: 10px 0 5px 0;
+            background:$white;
+            padding:2px 7px;
+            border:solid 1px $black;
+            border-radius: 3px;
+            font-size:13px;
+        }
+
+        .ais-RefinementList-showMore:hover{
+            background: rgba(200,200,200,0.2);
+            border:solid 1px transparent;
+        }
+
+        .ais-ClearRefinements-button{
+            position:relative;
+            left:50%;
+            transform: translateX(-75%);
+            margin:5px;
+            background: $white;
+            border:solid 1px $black;
+            padding:3px 8px;
+            border-radius:3px;
+            font-size:15px;
+            font-weight:500;
+        }
+
+        .ais-ClearRefinements-button:hover{
+            background:$primary;
+            border:solid 1px transparent;
+        }
+
+        .ais-RefinementList-showMore:focus, .ais-ClearRefinements-button:focus{
+            outline:none;
+        }
+    }
+
+    .search-results{
+        position:fixed;
+        top:100px;
+        right:20px;
+        width:calc(100% - 220px);
+        height:calc(100% - 180px);
+        overflow:auto;
+    }
+
+    .ais-PoweredBy{
+        position:absolute;
+        bottom:20px;
+        right:20px;
+    }
+
+    .ais-Pagination{
+        position:absolute;
+        bottom:20px;
+        left:50%;
+        transform: translateX(-50%);
+
+        ul.ais-Pagination-list{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+
+            li.ais-Pagination-item--firstPage, li.ais-Pagination-item--disabled{
+                display:none;
+            }
+
+            li.ais-Pagination-item--previousPage, li.ais-Pagination-item--nextPage{
+                margin:0 10px;
+
+                a.ais-Pagination-link, span.ais-Pagination-link{
+                    display:flex;
+                    flex-direction:row;
+                    align-items:center;
+                    justify-content:center;
+                    height: 1.8rem;
+                    width:1.8rem;
+                    background-color:$white;
+                    border-radius:20px;
+                    box-shadow: 0px 0px 5px 2px rgba(100,100,100,0.2);
+                    font-family: $headers;
+                    font-size:1.6rem;
+                }
+            }
+
+            li.ais-Pagination-item{
+                margin:0 5px;
+
+                a.ais-Pagination-link{
+                    font-family: $headers;
+                    font-size:1.6rem;
+                }
+
+                a.ais-Pagination-link--selected{
+                    color:$primary;
+                }
+            }
+        }
+    }
+}
+
+// Search Card //
+
+.search-card-wrapper{
+    background: rgba(236, 236, 236, 0.1);
+    border-radius:5px;
+    margin:20px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    box-shadow: 0px 0px 8px 3px rgba(100, 100, 100, 0.2);
+
+
+    .image-link{
+        width:40%;
+
+        .gatsby-image-wrapper{
+            display:block;
+            width:100%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }  
+    }
+
+    .post-data{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:60%;
+        text-align:left;
+        margin:10px 30px;
+
+        a.button{
+            font-size:1.4rem;
+        }
+
+        h1{
+            text-align:center;
+            padding:5px 0 2px 0;
+            font-size:2.3rem;
+        }
+    
+        span.date{
+            padding:3px 0 6px 0;
+        }
+    
+        p.excerpt{
+            padding:10px 5px;
+            font-size:1.2rem;
+        }
+
+        .category, .tags{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            margin: 10px 0;
+            align-self:start;
+    
+            p{
+                margin-right:5px;
+                font-family:$headers;
+                font-size:1.2rem;
+            }
+            
+        }
+    
+        .category{
+    
+            p{
+                margin-right:10px;
+            }
+    
+            span{
+                background-color:rgba(255, 255, 255, 0.5);
+                font-size:1.1rem;
+                font-weight:600;
+                color:$primary;
+                padding:2px 10px;
+                border-radius:5px;
+            }
+        }
+    
+        .category:hover, category:focus{
+    
+            span{
+                cursor:pointer;
+                background-color:rgba(255,255,255);
+                box-shadow: 0px 0px 5px 1px rgba(14,155,249,0.5);
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+  data.pages.nodes.forEach((page) => {
+    createPage({
+      component: path.resolve('./src/templates/page.js'),
+      context: {
+        page,
+      },
+      path: `/${page.slug}`,
+    })
+  })
