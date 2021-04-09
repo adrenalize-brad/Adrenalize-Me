@@ -73,7 +73,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       path: `/${title.toLowerCase()}`,
     })
   })
-
+  
   data.posts.edges.forEach(({ page }) => {
 
     createPage({

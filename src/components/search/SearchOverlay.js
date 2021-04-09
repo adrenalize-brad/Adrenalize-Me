@@ -11,7 +11,7 @@ const client = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_API_KEY
 );
-
+ 
 const SearchOverlay = ({ toggleOpen, closeToggle }) => {
 
   return (

@@ -3,7 +3,7 @@ import PageWrapper from '../components/page/page'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 function PageTemplate({ pageContext: { page } }) {
-
+  
   return (
 
     <PageWrapper>

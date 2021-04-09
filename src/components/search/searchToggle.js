@@ -2,7 +2,7 @@ import React from 'react';
 import { CloseIcon, SearchIcon } from '../icons/icons'
 import { bool, func } from 'prop-types'
 
-
+ 
 const SearchOpenToggle = ({toggleOpen, setToggleOpen}) => {
 
     return(

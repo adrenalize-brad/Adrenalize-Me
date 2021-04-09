@@ -9,7 +9,7 @@ function PageTemplate({ data: { allGraphCmsPost }, pageContext: { title, coverIm
   const sharingUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
-
+ 
     <PageWrapper>
 
       <SEO

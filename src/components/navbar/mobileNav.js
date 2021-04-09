@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import { StyledMenu } from './MobileNav.styled';
-
+ 
 const MobileNav =({className, children, open}) =>{
 
     return(

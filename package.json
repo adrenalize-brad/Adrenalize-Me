@@ -1,7 +1,7 @@
 {
-  "name": "adrenalize-starter",
+  "name": "AdrenalizeMe.com",
   "private": true,
-  "description": "Bare bones starter for Adrenalize project kickoff",
+  "description": "AdrenalizeMe.com Git Repo",
   "version": "1.0.0",
   "author": "Bradley Smith <brad@adrenalizedigital.ca>",
   "dependencies": {

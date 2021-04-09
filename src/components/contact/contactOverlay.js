@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactForm from './contactForm'
 import './contact.scss'
-
+ 
 const ContactOverlay = () => {
 
     return(

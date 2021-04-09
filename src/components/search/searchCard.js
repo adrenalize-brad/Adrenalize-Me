@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Tag from '../blog/tag'
 import Button from '../button/button'
-
+  
 const SearchCard = ({ title, date, image, excerpt, category, tags, slug, categoryUrl }) => {
 
     return(

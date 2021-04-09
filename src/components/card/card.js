@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../button/button'
-
+ 
 const Card = ({ cardClass, imageSrc, imageAlt, imageClass, imageWrapperClass, title, titleClass, caption, captionClass, price, priceClass, buttonTitle, buttonUrl, buttonClass }) => {
 
     return(

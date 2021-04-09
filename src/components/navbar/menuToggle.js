@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledToggle } from './MenuToggle.styled';
 import { bool, func } from 'prop-types'
-
+ 
 const MenuToggle = ({open, setOpen}) => {
 
     return(

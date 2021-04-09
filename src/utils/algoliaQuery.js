@@ -22,5 +22,5 @@ const algoliaQuery = `
     }
   }
 `;
-
+  
 module.exports = algoliaQuery;

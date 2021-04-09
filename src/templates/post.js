@@ -13,7 +13,7 @@ function PostTemplate({
   data: { authorImage, coverImage, categoryPosts }, 
   pageContext: { page }
 }) {
-
+ 
   const sharingUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   return (

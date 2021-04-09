@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 const SEO = ({ children, pageDescription, pageTitle, pageImage, pageUrl, pageKeywords }) => {
-
+  
   const data = useStaticQuery(graphql`
     query {
       site {
