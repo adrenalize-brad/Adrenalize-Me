@@ -9,6 +9,7 @@
     "@mdx-js/react": "^1.6.22",
     "algoliasearch": "^4.8.6",
     "classnames": "^2.2.6",
+    "cross-env": "^7.0.3",
     "gatsby": "^3.1.1",
     "gatsby-background-image": "^1.5.0",
     "gatsby-cli": "^3.2.0",
@@ -52,11 +53,11 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
+    "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
