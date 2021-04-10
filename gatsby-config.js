@@ -24,6 +24,7 @@ module.exports = {
         precachePages: [`/*`],
       },
     },
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-gatsby-cloud`,
     {
       resolve: 'gatsby-source-graphcms',
