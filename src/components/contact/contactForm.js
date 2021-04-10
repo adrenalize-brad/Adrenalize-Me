@@ -1,60 +1,83 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import './contact.scss'
 
 const ContactForm = () => {
 
-    const [ name, setName ] = useState("");
-    const [ subject, setSubject ] = useState("");
+    const [name, setName ] = useState("");
+    const [email, setEmail ] = useState("");
+    const [subject, setSubject ] = useState("");
+    const [message, setMessage ] = useState("");
+
+    const clearForm = () => {
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+    }
 
     const handleChange = ({ target }) => {
-
         switch(target.name){
             case "name":
                 setName(target.value);
                 break;
+            case "email":
+                setEmail(target.value);
+                break;
             case "subject":
                 setSubject(target.value);
+                break;
+            case "message":
+                setMessage(target.value);
                 break;
             default:
                 return;
         }
     }
-  
-    const handleSubmit = (event) => {
 
-        event.preventDefault();
+    const handleSubmit = (e) => {
 
+        e.preventDefault();
+
+        emailjs.sendForm('adrenalize_mailer', 'adrenalize_contact', e.target, 'user_PRn0RHoZKrcxSEqpdWiYy')
+        .then(clearForm())
+        .then(
+            (result) => {console.log(result.text);}, 
+            (error) => {console.log(error.text);}
+            );
     }
 
-    return(
 
-<div>
+  return (
 
-    <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" onSubmit={handleSubmit} >
-        
-        {/* Netlify Spam Reject */}
+    <form className="contact-form" onSubmit={handleSubmit}>
 
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact" />
-        
-        {/* Form Inputs */}
+        <input type="hidden" name="contact_number" />
 
-        <div className="text-input">
-            <label htmlFor="name">Name:</label>
-            <input type="text" name="name" placeholder="Cash Smith" value={name} onChange={handleChange} />
+        <div className="form-input">
+            <h3 htmlFor="name">Name</h3>
+            <input placeholder="My name is Jeff..." required type="text" name="name" value={name} onChange={handleChange}/>
         </div>
 
-        <div className="text-input">
-            <label htmlFor="age">Subject:</label>
-            <input type="text" name="subject" value={subject} onChange={handleChange} />
+        <div className="form-input">
+            <h3 htmlFor="name">Email</h3>
+            <input placeholder="Cool. How can we get in touch?" required type="email" name="email" value={email} onChange={handleChange}/>
         </div>
 
-        <button className="form-submit" type="submit">Submit</button>
+        <div className="form-input">
+            <h3 htmlFor="name">Subject</h3>
+            <input placeholder="What is it you want to talk about?" required type="text" name="subject" value={subject} onChange={handleChange} />
+        </div>
+
+        <div className="message-input">
+            <h3 htmlFor="name">Message</h3>
+            <textarea placeholder="Well then, tell us about it!" required name="message" value={message} onChange={handleChange} />
+        </div>
+
+        <button disabled type="submit">Send</button>
 
     </form>
-
-</div>
-
-    )
+  );
 }
 
 export default ContactForm

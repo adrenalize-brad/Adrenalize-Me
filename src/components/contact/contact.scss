@@ -1,4 +1,4 @@
-@import '../../styles/defaults.scss';
+@import '../../styles/theme.scss';
   
 .contact-overlay{
     background-color:$white;
@@ -27,4 +27,81 @@
 
     }
 
+}
+
+.contact-form{
+    max-width:600px;
+    margin:30px auto;
+    text-align:center;
+
+    .form-input{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        margin:10px;  
+
+        h3{
+            margin:0 auto;
+        }
+        
+        input{
+            font-family:$content;
+            font-weight:500;
+            width:80%;
+            padding:10px 5px 2px 5px;
+            background:none;
+            border-bottom:solid 2px rgba(60,60,60,0.2);
+        }
+
+        input:focus{
+            outline:none;
+            border-bottom:solid 2px $primary;
+        }
+
+    }
+
+    .message-input{
+        display:flex;
+        flex-direction:row;
+        align-items:top;
+        margin:10px;
+        
+        h3{
+            margin:0 auto;
+        }
+
+        textarea{
+            font-family:$content;
+            font-weight:500;
+            height:100px;
+            width:80%;
+            padding:5px;
+            background:none;
+            resize:none;
+            border-bottom:solid 2px rgba(60,60,60,0.2);
+        }
+
+        textarea:focus{
+            outline:none;
+            border-bottom:solid 2px $primary;
+        }
+
+    }
+
+    button{
+        font-family:$headers;
+        font-weight:600;
+        font-size:1.6rem;
+        padding:3px 12px;
+        border:solid 2px $black;
+        border-radius:5px;
+        background-color:$white;
+        margin-top:20px;
+    }
+
+    button:hover, button:focus{
+        background-color:$primary;
+        color:$white;
+        border-color:transparent;
+    }
 }

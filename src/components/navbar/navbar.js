@@ -97,15 +97,15 @@ const Navbar = () => {
 
                         return(
 
-                            <Link
+                            <a
                                 className="social-item"
-                                to={socialItem.url}
+                                href={socialItem.url}
                                 alt={socialItem.title}
                                 target="_blank" 
                                 rel="noopener noreferrer"
                             >
                                 <i className={socialItem.iconClass}/>
-                            </Link>
+                            </a>
 
                         )
 
