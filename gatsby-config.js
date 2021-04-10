@@ -25,7 +25,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: 'gatsby-source-graphcms',
       options: {

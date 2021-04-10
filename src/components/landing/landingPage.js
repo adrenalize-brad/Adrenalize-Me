@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import Jello from 'react-reveal/Jello';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
-import BackgroundImage from 'gatsby-background-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { BgImage } from "gbimage-bridge"
 import './landing.scss'
   
 const LandingPage = ({ children, title, backgroundImage }) => {
@@ -23,13 +23,15 @@ const LandingPage = ({ children, title, backgroundImage }) => {
     }
     `)
 
+    const bgImage = getImage(backgroundImage);
+
     return(
 
         <div className="landing-wrapper">
 
             <div className="background-wrapper">
 
-                <BackgroundImage className="background-image" fluid={backgroundImage}/>
+                <BgImage image={bgImage} className="background-image" />
 
             </div>
 

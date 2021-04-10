@@ -37,9 +37,7 @@ const Index = () => {
         backgroundImage {
           localFile {
             childImageSharp {
-              fluid(quality:100){
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality:100)
             }
           }
         }
@@ -63,7 +61,7 @@ const Index = () => {
 
       <LandingPage
         title={data.graphCmsLandingSection.title}
-        backgroundImage={data.graphCmsLandingSection.backgroundImage.localFile.childImageSharp.fluid}
+        backgroundImage={data.graphCmsLandingSection.backgroundImage.localFile.childImageSharp.gatsbyImageData}
       >
 
         <div className="featured-grid">
