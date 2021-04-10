@@ -83,13 +83,7 @@ const Navbar = () => {
 
                 )})}
 
-                <div className="search-wrapper">
 
-                    <SearchOpenToggle toggleOpen={toggleOpen} setToggleOpen={setToggleOpen}/>
-
-                    <SearchOverlay toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} closeToggle={<SearchCloseToggle toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} />}/>
-
-                </div>
 
                 <div className="social-wrapper">
 
@@ -157,8 +151,7 @@ const Navbar = () => {
 
                     }))}
 
-                <SearchOpenToggle toggleOpen={toggleOpen} setToggleOpen={setToggleOpen}/>
-                <SearchOverlay toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} closeToggle={<SearchCloseToggle toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} />}/>
+
                 </div>
 
             </MobileNav>
