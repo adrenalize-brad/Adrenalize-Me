@@ -1,6 +1,7 @@
 import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, Pagination, Hits, SearchBox, RefinementList, ClearRefinements, Configure, PoweredBy } from 'react-instantsearch-dom';
+import { orderBy } from 'lodash';
 import SearchHit from './SearchHit';
 import { bool, func } from 'prop-types';
 import { StyledSearch } from './SearchOverlay.styled';
@@ -28,9 +29,9 @@ const SearchOverlay = ({ toggleOpen, closeToggle }) => {
         <div className="search-filter">
             <h2>Filter by:</h2>
             <h3>Category</h3>
-            <RefinementList attribute="category" />
+            <RefinementList attribute="category" transformItems={items => orderBy(items, "label", "asc")}/>
             <h3>Tag</h3>
-            <RefinementList attribute="tags" limit={5} showMore="true" />
+            <RefinementList attribute="tags" limit={5} showMore="true" transformItems={items => orderBy(items, "label", "asc")}/>
             <Configure hitsPerPage={5} />
             <ClearRefinements />
         </div>
