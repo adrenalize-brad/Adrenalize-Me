@@ -12,12 +12,19 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'AdrenalizeMe.com',
         icon:'src/assets/images/adrenalize-logo.png'
       },
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/*`],
+      },
+    },
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: 'gatsby-source-graphcms',
       options: {
