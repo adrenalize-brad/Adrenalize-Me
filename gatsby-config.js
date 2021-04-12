@@ -18,6 +18,7 @@ module.exports = {
         short_name: `Adrenalize Me`,
         background_color: `#eee`,
         theme_color: `rgb(14,155,249)`,
+        start_url: '/',
         display: `standalone`,
         cache_busting_mode: 'none',
         icon:'src/assets/images/adrenalize-logo.png',
