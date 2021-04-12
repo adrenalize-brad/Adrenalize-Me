@@ -18,6 +18,12 @@ module.exports = {
         icon:'src/assets/images/adrenalize-logo.png'
       },
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/*`,'/*/*'],
+      },
+    },
     `gatsby-plugin-netlify`,
     {
       resolve: 'gatsby-source-graphcms',
