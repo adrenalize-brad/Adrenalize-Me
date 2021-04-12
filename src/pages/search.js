@@ -2,7 +2,7 @@ import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, Pagination, Hits, SearchBox, RefinementList, ClearRefinements, Configure, PoweredBy } from 'react-instantsearch-dom';
 import { orderBy } from 'lodash';
-import SearchHit from './SearchHit';
+import SearchHit from '../components/search/SearchHit';
 import '../components/search/search.scss'
 
 const client = algoliasearch(
