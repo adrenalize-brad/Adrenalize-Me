@@ -9,6 +9,7 @@ import MobileSocialItem from './mobileSocialItem'
 import NavLogo from './navLogo';
 import { SearchOpenToggle, SearchCloseToggle } from '../search/searchToggle'
 import SearchOverlay from '../search/SearchOverlay'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const Navbar = () => {
@@ -40,11 +41,13 @@ const Navbar = () => {
                 menuItems{
                     title
                     slug
+                    id
                 }
                 socialItems{
                     title
                     url
                     iconClass
+                    id
                 }
             }
         }
@@ -77,13 +80,21 @@ const Navbar = () => {
                                 className="menu-item"
                                 to={`/${menuItem.slug}`}
                                 alt={menuItem.title}
+                                aria-label={`Link to ${menuItem.title} page`}
+                                key={menuItem.id}
                             >
                                 {menuItem.title}
                             </Link>
 
                 )})}
 
+                <div className="search-wrapper">
 
+                    <SearchOpenToggle toggleOpen={toggleOpen} setToggleOpen={setToggleOpen}/>
+
+                    <SearchOverlay toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} closeToggle={<SearchCloseToggle toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} />}/>
+
+                </div>
 
                 <div className="social-wrapper">
 
@@ -97,8 +108,10 @@ const Navbar = () => {
                                 alt={socialItem.title}
                                 target="_blank" 
                                 rel="noopener noreferrer"
+                                aria-label={`Link to AdrenalizeMe.com ${socialItem.title} page`}
+                                key={socialItem.id}
                             >
-                                <i className={socialItem.iconClass}/>
+                                <FontAwesomeIcon icon={['fab', `${socialItem.iconClass}`]} />
                             </a>
 
                         )
@@ -126,6 +139,8 @@ const Navbar = () => {
                                 title={menuItem.title}
                                 open={open}
                                 setOpen={setOpen}
+                                ariaLabel={`Link to ${menuItem.title} page`}
+                                key={menuItem.id}
                             />
                         
                     )})}
@@ -145,13 +160,16 @@ const Navbar = () => {
                                 iconClass={socialItem.iconClass}
                                 open={open}
                                 setOpen={setOpen}
+                                ariaLabel={`Link to AdrenalizeMe.com ${socialItem.title} page`}
+                                key={socialItem.id}
                             />
 
                         )
 
                     }))}
 
-
+                <SearchOpenToggle toggleOpen={toggleOpen} setToggleOpen={setToggleOpen}/>
+                <SearchOverlay toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} closeToggle={<SearchCloseToggle toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} />}/>
                 </div>
 
             </MobileNav>

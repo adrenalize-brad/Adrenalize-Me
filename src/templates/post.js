@@ -6,7 +6,7 @@ import PostCard from '../components/blog/postCard'
 import { FacebookShareButton, FacebookMessengerShareButton, LinkedinShareButton, TwitterShareButton, PinterestShareButton, RedditShareButton, WhatsappShareButton, EmailShareButton } from 'react-share'
 import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { FacebookIcon, FbMessengerIcon, LinkedInIcon, TwitterIcon, PinterestIcon, RedditIcon, WhatsappIcon, EmailIcon } from '../components/icons/icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SEO from '../components/seo/SEO'
  
 function PostTemplate({
@@ -105,13 +105,13 @@ function PostTemplate({
               quote={page.excerpt}
               hashtag={`#${page.title}`}
             >
-            <FacebookIcon/>
+            <FontAwesomeIcon icon={['fab', 'facebook-f']} />
             </FacebookShareButton>
 
             <FacebookMessengerShareButton
               url={sharingUrl}
             >
-            <FbMessengerIcon/>
+            <FontAwesomeIcon icon={['fab', 'facebook-messenger']} />
             </FacebookMessengerShareButton>
 
             <LinkedinShareButton 
@@ -120,7 +120,7 @@ function PostTemplate({
               summary={page.excerpt}
               source="https://www.adrenalizeme.com"
             >
-            <LinkedInIcon/>
+            <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
             </LinkedinShareButton>
 
             <TwitterShareButton 
@@ -128,7 +128,7 @@ function PostTemplate({
               title={page.title}
               hashtags={page.tags}
             >
-            <TwitterIcon/>
+            <FontAwesomeIcon icon={['fab', 'twitter']} />
             </TwitterShareButton>
 
             <PinterestShareButton 
@@ -136,21 +136,21 @@ function PostTemplate({
               media={coverImage.localFile.url}
               description={page.excerpt}
             >
-            <PinterestIcon/>
+            <FontAwesomeIcon icon={['fab', 'pinterest-p']} />
             </PinterestShareButton>
 
             <RedditShareButton 
               url={sharingUrl}
               title={page.title}
             >
-            <RedditIcon/>
+            <FontAwesomeIcon icon={['fab', 'reddit-alien']} />
             </RedditShareButton>
 
             <WhatsappShareButton 
               url={sharingUrl}
               title={page.title}
             >
-            <WhatsappIcon/>
+            <FontAwesomeIcon icon={['fas', 'whatsapp']} />
             </WhatsappShareButton>
 
             <EmailShareButton 
@@ -158,7 +158,7 @@ function PostTemplate({
               subject={page.title}
               body={page.excerpt}
             >
-            <EmailIcon/>
+            <FontAwesomeIcon icon={['fas', 'envelope']} />
             </EmailShareButton>
 
           </div>

@@ -10,7 +10,7 @@ const NavLogo = ( { linkUrl, image, imageAlt, title, caption }) => {
                 <GatsbyImage image={image} alt={imageAlt}/>
                 <div className="site-title">
                     <h2>{title}</h2>
-                    <h4>{caption}</h4>
+                    <h3>{caption}</h3>
                 </div>
         </Link>
     

@@ -6,7 +6,7 @@ const MenuToggle = ({open, setOpen}) => {
  
     return(
     
-        <StyledToggle open={open} onClick={() => setOpen(!open)} className="toggle-button" ARIA-role='menu-toggler'>
+        <StyledToggle open={open} onClick={() => setOpen(!open)} className="toggle-button" role="button" aria-label="Menu Toggle">
             <div />
             <div />
             <div />

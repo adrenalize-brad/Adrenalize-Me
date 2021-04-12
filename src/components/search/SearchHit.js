@@ -3,6 +3,7 @@ import SearchCard from './searchCard'
    
 const SearchHit = ({ hit: { objectID, title, date, excerpt, slug, category, tags, coverImage } }) => (
 
+<div>
   <article key={objectID}>
 
           <SearchCard
@@ -15,9 +16,9 @@ const SearchHit = ({ hit: { objectID, title, date, excerpt, slug, category, tags
             tags={tags}
             slug={`/${category.toLowerCase()}/${slug}`}
           />
-          
+  
   </article>
-
+  </div>
 );
 
 export default SearchHit;

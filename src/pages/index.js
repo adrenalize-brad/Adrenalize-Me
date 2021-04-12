@@ -79,6 +79,7 @@ const Index = () => {
               categoryUrl={`/${post.category.title.toLowerCase()}`}
               tags={post.tags}
               slug={`/${post.category.title.toLowerCase()}/${post.slug}`}
+              key={post.id}
             />
           )
 

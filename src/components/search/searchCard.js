@@ -9,7 +9,7 @@ const SearchCard = ({ title, date, image, excerpt, category, tags, slug, categor
     return(
 
         <div className="search-card-wrapper">
-
+            
             <Link className="image-link" to={slug.toLowerCase()}>
                 <GatsbyImage image={image} alt={title}/>
             </Link>
@@ -33,14 +33,14 @@ const SearchCard = ({ title, date, image, excerpt, category, tags, slug, categor
                     <div className="tags-wrapper">
 
                         {Object.values(tags).map((item) => (
-                            <Tag>{item}</Tag>
+                            <Tag key={item}>{item}</Tag>
                         ))}
 
                     </div>
 
                 </div>
 
-                <Button title="Read More" url={slug.toLowerCase()}/>
+                <Button title="Read More" url={slug.toLowerCase()} ariaLabel={`Read the full post about ${title}`}/>
 
             </div>
 

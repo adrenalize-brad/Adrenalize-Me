@@ -5,11 +5,11 @@ import Tag from './tag'
 import Button from '../button/button'
 import './blog.scss'
   
-const PostCard = ({ title, date, image, excerpt, category, tags, slug, categoryUrl }) => {
+const PostCard = ({ title, date, image, excerpt, category, tags, slug, categoryUrl, key }) => {
 
     return(
 
-        <div className="post-card-wrapper">
+        <div className="post-card-wrapper" key={key}>
 
             <h1>{title}</h1>
 
@@ -32,7 +32,7 @@ const PostCard = ({ title, date, image, excerpt, category, tags, slug, categoryU
                     <div className="tags-wrapper">
 
                         {Object.values(tags).map((item) => (
-                            <Tag>{item}</Tag>
+                            <Tag key={item}>{item}</Tag>
                         ))}
 
                     </div>
@@ -41,7 +41,7 @@ const PostCard = ({ title, date, image, excerpt, category, tags, slug, categoryU
 
             </div>
 
-            <Button title="Read More" url={slug.toLowerCase()}/>
+            <Button title="Read More" url={slug.toLowerCase()} ariaLabel={`Read the full post about ${title}`}/>
 
         </div>
     )

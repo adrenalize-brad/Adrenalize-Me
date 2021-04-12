@@ -1,11 +1,11 @@
 import React from 'react'
 import './blog.scss'
  
-const Tag = ({ children }) => {
+const Tag = ({ children, key }) => {
 
     return(
 
-        <div className="tag">
+        <div className="tag" key={key}>
             <span>{children}</span>
         </div>
     )

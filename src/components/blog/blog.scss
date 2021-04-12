@@ -187,14 +187,14 @@
         flex-direction:row;
     }
 
-    i{
+    svg{
         margin:5px;
         outline:none;
         transition: ease 0.1s;
         font-size:2rem;
     }
 
-    i:hover, i:focus{
+    svg:hover, svg:focus{
         transform:scale(1.1);
         transition: ease 0.1s;
         color:$primary;
