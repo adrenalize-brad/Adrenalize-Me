@@ -15,7 +15,16 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'AdrenalizeMe.com',
-        icon:'src/assets/images/adrenalize-logo.png'
+        short_name: `Adrenalize Me`,
+        background_color: `#eee`,
+        theme_color: `rgb(14,155,249)`,
+        display: `standalone`,
+        cache_busting_mode: 'none',
+        icon:'src/assets/images/adrenalize-logo.png',
+        include_favicon: true,
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
     `gatsby-plugin-offline`,
